@@ -1,0 +1,76 @@
+body {
+  background-color: #080d24;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, white, transparent),
+    radial-gradient(2px 2px at 100px 80px, #63e6ff, transparent),
+    radial-gradient(1px 1px at 160px 140px, white, transparent),
+    radial-gradient(2px 2px at 220px 50px, white, transparent),
+    radial-gradient(1px 1px at 280px 180px, #63e6ff, transparent),
+    radial-gradient(2px 2px at 350px 100px, white, transparent);
+  background-size: 400px 220px;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+
+h1 {
+  color: #63E6FF;
+  font-size: 48px;
+  text-shadow: 0 0 12px #00CFFF;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+button {
+  background: linear-gradient(135deg, #63E6FF, #387BFF);
+  color: #080D24;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 14px 32px;
+  border: 1px solid #8AF0FF;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #387BFF;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 12px #387BFF;
+  }
+  50% {
+    box-shadow: 0 0 28px #63E6FF;
+  }
+}
+* {
+  color: #00e5ff;
+  text-shadow:
+    0 0 8px #00e5ff,
+    0 0 16px #00b8d4,
+    0 0 24px #0097a7;
+}
+
+/* Keep the button text readable */
+button {
+  color: #001a1f; /* dark text so it stays readable on the blue button */
+  text-shadow: none;
+}
+.galaxy {
+  display: inline-block;
+  font-size: 1.4em;
+  filter: drop-shadow(0 0 6px #00e5ff)
+          drop-shadow(0 0 12px #00b8d4)
+          drop-shadow(0 0 18px #0097a7);
+}
