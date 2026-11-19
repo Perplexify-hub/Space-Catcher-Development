@@ -1,4 +1,6 @@
 body {
+  background-size: 400px 220px;
+animation: starMovement 20s linear infinite;
   background-color: #080d24;
   background-image:
     radial-gradient(2px 2px at 20px 30px, white, transparent),
@@ -27,6 +29,7 @@ h1 {
 p {
   font-size: 18px;
   line-height: 1.5;
+
 }
 button {
   background: linear-gradient(135deg, #63E6FF, #387BFF);
@@ -74,3 +77,56 @@ button {
           drop-shadow(0 0 12px #00b8d4)
           drop-shadow(0 0 18px #0097a7);
 }
+.game-area {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  margin: 24px auto;
+  background-color: #111a3d;
+  border: 2px solid #63e6ff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.spaceship {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px;
+}
+
+.star {
+    position: absolute;
+    top: 40px;
+    left: 30%;
+    font-size: 48px;
+    color: #FFD700;
+    -webkit-text-fill-color: #FFD700;
+    -webkit-text-stroke: 1.5px #8B4500;
+    animation: starFloatSpin 4s ease-in-out infinite;
+    z-index: 5;
+}
+
+@keyframes starFloatSpin {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+.spaceship img {
+  width: 110px;
+  height: auto;
+  display: block;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 12px #00bfff);
+}
+
+ 
