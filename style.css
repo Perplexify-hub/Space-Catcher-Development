@@ -120,6 +120,13 @@ button {
         transform: translateY(0) rotate(360deg);
     }
 }
+.spaceship {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px;
+}
 
 .spaceship img {
   width: 110px;
@@ -127,6 +134,125 @@ button {
   display: block;
   mix-blend-mode: screen;
   filter: drop-shadow(0 0 12px #00bfff);
+  animation: thrusterPulse 0.4s infinite alternate ease-in-out;
+}
+
+
+@keyframes thrusterPulse {
+  0% {
+    transform: translateY(0px) scaleY(1);
+    filter: drop-shadow(0 5px 10px #00f3ff);
+  }
+  100% {
+    transform: translateY(-4px) scaleY(1.04);
+    filter: drop-shadow(0 12px 24px #00f3ff) brightness(1.2);
+  }
+}
+
+.sci-fi-text {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.cyan-glow-heavy {
+  color: #00f3ff;
+  text-shadow:
+    0 0 8px #00f3ff,
+    0 0 18px #00b8d4,
+    0 0 30px #0097a7;
+}
+
+/* Title Laser Wings */
+.title-wings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 10px 0;
+}
+
+.title-wings h1 {
+  margin: 0;
+}
+
+.wing {
+  height: 2px;
+  width: 90px;
+  position: relative;
+}
+
+.wing.left {
+  background: linear-gradient(90deg, transparent, #00f3ff);
+  box-shadow: 0 0 10px #00f3ff;
+}
+
+.wing.right {
+  background: linear-gradient(90deg, #00f3ff, transparent);
+  box-shadow: 0 0 10px #00f3ff;
+}
+
+.wing::after {
+  content: '◆';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-52%);
+  color: #00f3ff;
+  font-size: 12px;
+  text-shadow: 0 0 8px #00f3ff;
+}
+
+.wing.left::after { right: -6px; }
+.wing.right::after { left: -6px; }
+
+/* Equal-Width Score & Lives HUD Boxes */
+.hud {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.hud-item {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 16px;
+  background: rgba(16, 42, 86, 0.45);
+  border: 1px solid #00f3ff;
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.25);
+}
+
+.score-value, .lives {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 8px 0 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 24px 12px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .instructions,
+  .credits {
+    font-size: 16px;
+  }
+
+  .hud {
+    gap: 10px;
+  }
+
+  .hud-item {
+    padding: 10px;
+  }
 }
 
  
