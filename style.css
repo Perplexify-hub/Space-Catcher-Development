@@ -128,5 +128,167 @@ button {
   mix-blend-mode: screen;
   filter: drop-shadow(0 0 12px #00bfff);
 }
+.hud {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
 
- 
+.hud-item {
+  flex: 1;
+  padding: 14px;
+  background-color: #131d40;
+  border: 1px solid #344574;
+  border-radius: 12px;
+}
+
+.hud .score-label,
+.hud .lives-label {
+  margin: 0 0 8px;
+  color: #b7c5ed;
+  font-size: 14px;
+  text-shadow: none;
+}
+
+.hud .score-value,
+.hud .lives {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.hud .score-value {
+  color: white;
+}
+
+.hud .lives {
+  color: #00cfff;
+  font-size: 30px;
+  letter-spacing: 5px;
+  text-shadow:
+    0 0 5px #00cfff,
+    0 0 12px #0088ff,
+    0 0 20px #0055ff;
+}
+
+.mission-ready {
+  margin: 0 0 12px;
+}
+
+h1 {
+  margin: 0 0 16px;
+}
+
+.description {
+  margin: 0 0 20px;
+  color: #c5d1ef;
+  text-shadow: none;
+}
+
+.hud-item {
+  flex: 1;
+  padding: 14px;
+  background: linear-gradient(135deg, #101d42, #172d5c);
+  border: 1px solid #00aaff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.25);
+  transition: 0.3s ease;
+}
+
+.hud-item:hover {
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.6);
+  border-color: #55ccff;
+}
+
+.hud-item:hover {
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.6);
+  border-color: #55ccff;
+}
+
+.hud .score-value {
+  color: #00d9ff;
+  text-shadow: 0 0 10px #00aaff;
+}
+
+.cyan-glow {
+  color: #00f3ff; /* Bright cyan text color */
+ text-shadow:
+    0 0 5px rgba(0, 243, 255, 0.8),
+    0 0 12px rgba(0, 243, 255, 0.5),
+    0 0 20px rgba(0, 243, 255, 0.3);
+}
+
+.sci-fi-text {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;          /* Makes it super thick and blocky */
+  text-transform: uppercase;   /* Forces all letters to be capital */
+  letter-spacing: 3px;         /* Spreads the letters out for that HUD look */
+}
+
+/* Classic, sweeping formal calligraphy (great for signatures/titles) */
+.calligraphy-elegant {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* Smooth, slanted brush script (very clean and legible) */
+.calligraphy-brush {
+  font-family: 'Alex Brush', cursive;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/* Lively, slightly thicker script (easier to read at smaller sizes) */
+.calligraphy-casual {
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.title-wings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 10px 0;
+}
+
+.title-wings h1 {
+  margin: 0;
+}
+
+.wing {
+  height: 2px;
+  width: 90px;
+  position: relative;
+}
+
+.wing.left {
+  background: linear-gradient(90deg, transparent, #00f3ff);
+  box-shadow: 0 0 10px #00f3ff;
+}
+
+.wing.right {
+  background: linear-gradient(90deg, #00f3ff, transparent);
+  box-shadow: 0 0 10px #00f3ff;
+}
+
+/* Adds a glowing diamond point on the inner ends */
+.wing::after {
+  content: '◆';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-52%);
+  color: #00f3ff;
+  font-size: 12px;
+  text-shadow: 0 0 8px #00f3ff;
+}
+
+.wing.left::after { right: -6px; }
+.wing.right::after { left: -6px; }
+
